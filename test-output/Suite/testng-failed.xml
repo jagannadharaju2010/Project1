@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" parallel="tests">
+  <parameter name="ip" value="10.0.2.102"/>
+  <parameter name="browser" value="firefox"/>
+  <test name="Test1(failed)" parallel="tests">
+    <parameter name="ip" value="10.0.2.93"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="fb.TestLogin">
+        <methods>
+          <include name="testGrid" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- fb.TestLogin -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+  <test name="Test2(failed)" parallel="tests">
+    <parameter name="ip" value="10.0.2.102"/>
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="fb.TestLogin">
+        <methods>
+          <include name="testGrid" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- fb.TestLogin -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [Suite] -->

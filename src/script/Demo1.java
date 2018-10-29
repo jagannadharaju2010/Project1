@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import generic.BaseTest;
 import generic.Utility;
 import page.DashboardPage;
+import page.DirectoryPage;
 import page.LoginPage;
 
 public class Demo1 extends BaseTest {
@@ -19,6 +20,8 @@ public class Demo1 extends BaseTest {
 		l.setUserName(un);
         l.setPassword(pw);
         l.clickLogin();
+        DirectoryPage dp=new DirectoryPage(driver);
+        dp.clickbtn();
         DashboardPage d=new DashboardPage(driver);
         d.clickWelcome();
         d.clickLogout(driver, 10);

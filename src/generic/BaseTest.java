@@ -21,7 +21,7 @@ public abstract class BaseTest  implements IAutoConst{
 	
 	
 	public WebDriver driver;
-	public String url=Utility.getPropertyValue(CONFIG_PATH,"URL");
+	public String url=Utility.getPropertyValue(CONFIG_PATH,"URl");
 	public String ITO=Utility.getPropertyValue(CONFIG_PATH,"ITO");
 	public long l=Long.parseLong(ITO);
 	
@@ -34,7 +34,7 @@ public abstract class BaseTest  implements IAutoConst{
 		driver.manage().window().maximize();
 		driver.get(url);
 	}
-	@AfterMethod(alwaysRun=true)
+	@AfterMethod(alwaysRun=false)
 	public void closeApp(ITestResult result){
 		String name=result.getName();
 		int status = result.getStatus();

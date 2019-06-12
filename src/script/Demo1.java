@@ -1,6 +1,7 @@
 package script;
 
 
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
@@ -8,6 +9,7 @@ import org.testng.annotations.Test;
 import generic.BaseTest;
 import generic.Utility;
 import page.DashboardPage;
+import page.DashboardPageP2P;
 import page.DirectoryPage;
 import page.LoginPage;
 import page.LoginPageP2P;
@@ -30,6 +32,9 @@ public class Demo1 extends BaseTest {
 		l.username(un);
 		l.password(pw);
 		l.signButton();
+		DashboardPageP2P d=new DashboardPageP2P(driver);
+		d.sideBar();
+		d.reqLink();
 		
 	}
 }

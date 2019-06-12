@@ -19,7 +19,7 @@ public class FirstProgram {
 	public static void meth2() {
 		WebDriver driver=new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.manage().window().minimize();
+		driver.manage().window().fullscreen();
 		driver.close();
 	}
 

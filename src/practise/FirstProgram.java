@@ -20,6 +20,7 @@ public class FirstProgram {
 		WebDriver driver=new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().window().fullscreen();
+		driver.manager().window().getSize();
 		driver.close();
 	}
 
